@@ -20,8 +20,12 @@ for page_num in range(10):
     product_date = item.select_one("div.wrapfooter span.post-date");
     product_info = [product_name.get_text().strip(), product_date.get_text().strip()];
     product_list.append(product_info);
-    
+
+# data list excel save
 common_excel.save_excel_file("crawling_data.xlsx", "Report", product_list);
+
+# excel file data load & print
+common_excel.load_excel_file("crawling_data.xlsx", "Report");
 
 
 
