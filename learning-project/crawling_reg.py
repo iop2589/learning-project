@@ -8,3 +8,7 @@ matched = regex.match(val);
 print(searched, matched.group());
 
 print(val.replace(matched.group(), "kim ji hoon"));
+
+
+findalled = regex.findall(val);
+print(findalled[0]);
